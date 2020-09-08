@@ -13,7 +13,7 @@ Please see the corresponding sections below for details.
 This layer in the checked out branch depends on:
 
 URI: https://git.yoctoproject.org/poky  
-branch: zeus  
+branch: dunfell  
 revision: HEAD  
 layers: meta, meta-poky  
 
@@ -23,12 +23,12 @@ meta-freeescale-distro if using i.MX6, i.MX6UL, i.MX7 based machines
 or Layerscape/QorIQ.
 
 URI: https://git.yoctoproject.org/git/meta-freescale  
-branch: zeus  
+branch: dunfell  
 revision: HEAD  
 layers: meta-freeescale  
 
 URI: https://github.com/Freescale/meta-freescale-distro.git  
-branch: zeus  
+branch: dunfell  
 revision: HEAD  
 layers: meta-freeescale-distro  
 
