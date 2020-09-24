@@ -43,7 +43,6 @@ IMAGE_BOOT_FILES = "\
 "
 
 IMAGE_FSTYPES_append = " tar.gz ext4 wic"
-IMAGE_FSTYPES_remove = "ubi"
 
 # Do not update fstab file when using wic images
 WIC_CREATE_EXTRA_ARGS ?= "--no-fstab-update"
@@ -61,4 +60,7 @@ WKS_FILE_DEPENDS = "\
 UBI_VOLNAME = "rootfs"
 
 # List common SoC features
-MACHINE_FEATURES = "kernel26 apm usbgadget usbhost vfat ext2 screen alsa ethernet sgx mmip dsp pci can"
+MACHINE_FEATURES = "\
+   kernel26 apm usbgadget usbhost vfat ext2 screen alsa ethernet sgx mmip \
+   dsp pci can ubi \
+"

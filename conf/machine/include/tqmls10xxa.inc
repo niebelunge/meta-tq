@@ -14,7 +14,7 @@ PREFERRED_PROVIDER_virtual/kernel_tqmls10xxa = "linux-tq"
 MACHINE_EXTRA_RRECOMMENDS += "kernel-modules kernel-devicetree udev-extraconf"
 
 # provide info about machine's capabilities
-MACHINE_FEATURES_append = " ext2 pci rtc serial usbhost vfat"
+MACHINE_FEATURES_append = " ext2 pci rtc serial usbhost vfat ubi"
 
 # Image Options
 #
@@ -22,13 +22,8 @@ EXTRA_IMAGEDEPENDS += "virtual/bootloader"
 EXTRA_IMAGEDEPENDS_append_fsl-lsch2 += "fm-ucode"
 EXTRA_IMAGEDEPENDS_append_fsl-lsch3 += "rcw mc-utils management-complex"
 
-IMAGE_FSTYPES ?= "tar.gz ext4 wic ubi"
+IMAGE_FSTYPES ?= "tar.gz ext4 wic"
 IMAGE_FSTYPES_remove = " ext2.gz.u-boot ext2.gz"
-
-# DISTRO_FEATURES_remove += "${@bb.utils.contains('IMAGE_FSTYPES', 'ubi', 'wayland weston x11', '', d)}"
-IMAGE_FSTYPES_remove += "${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', 'ubi', '', d)}"
-IMAGE_FSTYPES_remove += "${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'ubi', '', d)}"
-IMAGE_FSTYPES_remove += "${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'ubi', '', d)}"
 
 # needed for Rootfs on QSPI
 IMAGE_INSTALL_append = " mtd-utils-jffs2 mtd-utils-ubifs mtd-utils-misc"

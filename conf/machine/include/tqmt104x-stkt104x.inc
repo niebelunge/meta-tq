@@ -49,7 +49,7 @@ MACHINEOVERRIDES =. "qoriq-ppc:qoriq:"
 SOC_DEFAULT_IMAGE_FSTYPES = "tar.gz ext4"
 IMAGE_FSTYPES ?= "${SOC_DEFAULT_IMAGE_FSTYPES}"
 
-MACHINE_FEATURES ?= "pci ext4 serial"
+MACHINE_FEATURES ?= "pci ext4 serial ubi"
 MACHINE_EXTRA_RRECOMMENDS += "udev-extraconf kernel-modules"
 
 # Sub-architecture support

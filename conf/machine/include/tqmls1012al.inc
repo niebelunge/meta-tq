@@ -28,7 +28,7 @@ MACHINE_EXTRA_RRECOMMENDS_append = " ppfe-firmware"
 
 # provide info about machine's capabilities
 # OP-TEE is currently untested, so we don't enable the feature for now
-MACHINE_FEATURES_append = " ext2 pci rtc serial usbhost vfat"
+MACHINE_FEATURES_append = " ext2 pci rtc serial usbhost vfat ubi"
 
 # Image Options
 #
@@ -36,8 +36,6 @@ EXTRA_IMAGEDEPENDS += "virtual/bootloader"
 EXTRA_IMAGEDEPENDS += "rcw atf ppfe-firmware"
 IMAGE_FSTYPES_append = " tar.gz ext4 wic"
 IMAGE_FSTYPES_remove = " tar.bz2 sdcard.bz2 ext2.gz.u-boot ext2.gz"
-
-DISTRO_FEATURES_remove += "${@bb.utils.contains('IMAGE_FSTYPES', 'ubi', 'wayland weston x11', '', d)}"
 
 # needed for Rootfs on QSPI
 IMAGE_INSTALL_append = " mtd-utils-jffs2 mtd-utils-ubifs mtd-utils-misc"

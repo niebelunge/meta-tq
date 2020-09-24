@@ -26,15 +26,13 @@ UBOOT_ENTRYPOINT_ls102xa = "0x80008000"
 MACHINE_EXTRA_RRECOMMENDS += "kernel-modules kernel-devicetree udev-extraconf"
 
 # provide info about machine's capabilities
-MACHINE_FEATURES_append = " alsa ext2 pci rtc serial usbhost vfat can"
+MACHINE_FEATURES_append = " alsa ext2 pci rtc serial usbhost vfat can ubi"
 
 # Image Options
 #
 EXTRA_IMAGEDEPENDS += "virtual/bootloader"
 IMAGE_FSTYPES_append = " tar.gz ext4 wic"
 IMAGE_FSTYPES_remove = " tar.bz2 sdcard.bz2 ext2.gz.u-boot ext2.gz"
-
-DISTRO_FEATURES_remove += "${@bb.utils.contains('IMAGE_FSTYPES', 'ubi', 'wayland weston x11', '', d)}"
 
 # needed for Rootfs on QSPI
 IMAGE_INSTALL_append = " mtd-utils-jffs2 mtd-utils-ubifs mtd-utils-misc"

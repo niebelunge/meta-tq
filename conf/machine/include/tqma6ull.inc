@@ -15,7 +15,7 @@ require conf/machine/include/tune-cortexa7.inc
 #
 MACHINE_EXTRA_RRECOMMENDS += "kernel-modules kernel-devicetree"
 MACHINE_EXTRA_RRECOMMENDS += " linux-firmware-imx-sdma-imx6q"
-MACHINE_FEATURES_append = " alsa ext2 rtc serial usbhost vfat can"
+MACHINE_FEATURES_append = " alsa ext2 rtc serial usbhost vfat can ubi"
 
 # TQ u-boot and kernel
 #
@@ -36,12 +36,8 @@ UBOOT_CONFIG = "sd qspi"
 # Image Options
 #
 EXTRA_IMAGEDEPENDS += "virtual/bootloader"
-IMAGE_FSTYPES_append = " tar.gz ext4 wic ubi"
+IMAGE_FSTYPES_append = " tar.gz ext4 wic"
 IMAGE_FSTYPES_remove = " tar.bz2 sdcard.bz2 wic.gz"
-
-# DISTRO_FEATURES_remove += "${@bb.utils.contains('IMAGE_FSTYPES', 'ubi', 'wayland weston x11', '', d)}"
-IMAGE_FSTYPES_remove += "${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'ubi', '', d)}"
-IMAGE_FSTYPES_remove += "${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'ubi', '', d)}"
 
 # needed for Rootfs on QSPI
 IMAGE_INSTALL_append = " mtd-utils-jffs2 mtd-utils-ubifs mtd-utils-misc"
