@@ -37,9 +37,6 @@ EXTRA_IMAGEDEPENDS += "rcw atf ppfe-firmware"
 IMAGE_FSTYPES_append = " tar.gz ext4 wic"
 IMAGE_FSTYPES_remove = " tar.bz2 sdcard.bz2 ext2.gz.u-boot ext2.gz"
 
-# needed for Rootfs on QSPI
-IMAGE_INSTALL_append = " mtd-utils-jffs2 mtd-utils-ubifs mtd-utils-misc"
-
 # Image Options
 #
 MKUBIFS_ARGS = " -m 1 -e 65408 -c 896 "

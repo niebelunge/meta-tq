@@ -39,9 +39,6 @@ EXTRA_IMAGEDEPENDS += "virtual/bootloader"
 IMAGE_FSTYPES_append = " tar.gz ext4 wic"
 IMAGE_FSTYPES_remove = " tar.bz2 sdcard.bz2 wic.gz"
 
-# needed for Rootfs on QSPI
-IMAGE_INSTALL_append = " mtd-utils-jffs2 mtd-utils-ubifs mtd-utils-misc"
-
 # from PTXdist BSP:
 # PTXCONF_IMAGE_ROOT_UBIFS_PEB_SIZE="65536"
 # PTXCONF_IMAGE_ROOT_UBIFS_MINIMUM_IO_UNIT_SIZE="1"
