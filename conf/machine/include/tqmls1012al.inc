@@ -24,6 +24,7 @@ UBOOT_ENTRYPOINT_ls1012a = "0x80008000"
 #
 
 MACHINE_EXTRA_RRECOMMENDS += "kernel-modules kernel-devicetree udev-extraconf"
+MACHINE_EXTRA_RRECOMMENDS_append = " ppfe-firmware"
 
 # provide info about machine's capabilities
 # OP-TEE is currently untested, so we don't enable the feature for now
@@ -40,8 +41,6 @@ DISTRO_FEATURES_remove += "${@bb.utils.contains('IMAGE_FSTYPES', 'ubi', 'wayland
 
 # needed for Rootfs on QSPI
 IMAGE_INSTALL_append = " mtd-utils-jffs2 mtd-utils-ubifs mtd-utils-misc"
-IMAGE_INSTALL_append = " ppfe-firmware"
-IMAGE_INSTALL_append = " kernel-modules"
 
 # Image Options
 #

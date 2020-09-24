@@ -41,7 +41,6 @@ DISTRO_FEATURES_remove += "${@bb.utils.contains('IMAGE_FSTYPES', 'ubi', 'wayland
 
 # needed for Rootfs on QSPI
 IMAGE_INSTALL_append = " mtd-utils-jffs2 mtd-utils-ubifs mtd-utils-misc"
-IMAGE_INSTALL_append = " kernel-modules"
 
 # Image Options
 #
