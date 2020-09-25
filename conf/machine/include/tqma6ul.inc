@@ -37,8 +37,7 @@ UBOOT_CONFIG = "sd qspi"
 # Image Options
 #
 EXTRA_IMAGEDEPENDS += "virtual/bootloader"
-IMAGE_FSTYPES_append = " tar.gz ext4 wic"
-IMAGE_FSTYPES_remove = " tar.bz2 sdcard.bz2 wic.gz"
+IMAGE_FSTYPES ?= "tar.gz ext4 wic"
 
 # from PTXdist BSP:
 # PTXCONF_IMAGE_ROOT_UBIFS_PEB_SIZE="65536"

@@ -23,7 +23,6 @@ EXTRA_IMAGEDEPENDS_append_fsl-lsch2 += "fm-ucode"
 EXTRA_IMAGEDEPENDS_append_fsl-lsch3 += "rcw mc-utils management-complex"
 
 IMAGE_FSTYPES ?= "tar.gz ext4 wic"
-IMAGE_FSTYPES_remove = " ext2.gz.u-boot ext2.gz"
 
 # Do not update fstab file when using wic images
 WIC_CREATE_EXTRA_ARGS ?= "--no-fstab-update"
