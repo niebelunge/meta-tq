@@ -55,6 +55,11 @@ WKS_FILE_DEPENDS = "\
 	virtual/bootloader \
 	"
 
+MKUBIFS_ARGS = " -m 1 -e 65408 -c 896 "
+UBINIZE_ARGS = " -p 65536 -m 1 -s 1 "
+# needs to be set to have it consistent for kernel command line
+UBI_VOLNAME = "root"
+
 # Use the expected value of the ubifs filesystem's volume name in the kernel
 # and u-boot.
 UBI_VOLNAME = "rootfs"
