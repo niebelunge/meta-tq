@@ -19,6 +19,8 @@ SRC_URI = "\
 SRCBRANCH = "TQMaxx-fslc-5.4-1.0.0-imx"
 SRCREV = "b67549f8a303aeaa23807d796a1d9e07aa03735b"
 
+require linux-tq.inc
+
 COMPATIBLE_MACHINE = "tqma7x"
 COMPATIBLE_MACHINE_append = "|tqma6x"
 COMPATIBLE_MACHINE_append = "|tqma6ulx"

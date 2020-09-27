@@ -15,6 +15,9 @@ SRC_URI = "\
 	${TQ_GIT_BASEURL}/linux-tqmt.git;protocol=${TQ_GIT_PROTOCOL};branch=${SRCBRANCH} \
 	file://defconfig \
 "
+
+require linux-tq.inc
+
 SRCBRANCH = "TQMT104x-linux-v4.19"
 SRCREV = "fc7aa8d327ba9920acd5278d906c06ad7c9608ec"
 

@@ -16,6 +16,8 @@ SRC_URI = "\
   file://defconfig;md5=9dc87e929994ceb86a9fdfb03a87504e \
 "
 
+require linux-tq.inc
+
 SRCBRANCH = "TQMLS10xxA-linux-4.19.0"
 SRCREV = "49070219f52a4a36072c122d06b63760ef5d2ccc"
 

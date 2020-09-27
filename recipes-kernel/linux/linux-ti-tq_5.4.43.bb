@@ -13,6 +13,8 @@ SRC_URI = " \
   file://defconfig \
 "
 
+require linux-tq.inc
+
 SRCBRANCH = "TQMa57xx-TI-linux-5.4.y-07.00.00.005-rt"
 SRCREV = "f2ac785687f198057e4e5e913abac03d9bc417c5"
 

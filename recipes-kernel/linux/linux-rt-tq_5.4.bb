@@ -14,6 +14,8 @@ SRC_URI = "\
   file://defconfig \
 "
 
+require linux-tq.inc
+
 SRCBRANCH = "TQMaxx-linux-v5.4.y-rt"
 SRCREV = "ca9d7d6cbb69c61a81a937a03a09919befb81639"
 

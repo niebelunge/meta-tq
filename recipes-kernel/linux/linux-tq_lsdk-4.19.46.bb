@@ -23,6 +23,8 @@ SRC_URI = "\
   file://defconfig;md5=335abcc600ce7ddb91f491bf478927c6 \
 "
 
+require linux-tq.inc
+
 SRCREV = "1a4cab2c597de7ac87c6ab4ce2a42e5e5adb3c0b"
 
 
